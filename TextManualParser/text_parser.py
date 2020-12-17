@@ -7,12 +7,20 @@ Created on Wed Dec 16 16:55:30 2020
 
 class TextParser:
     
-    def __init__(self, DATAFRAME, INDEX, COLUMN):
+    def __init__(self, DATAFRAME, INDEX, COLUMN, TAG):
+        
+        #Creating the variables and methods that will build the Class Skeleton.
         self.DATAFRAME = DATAFRAME
         self.INDEX = INDEX
         self.COLUMN = COLUMN
+        self.TAG = TAG
+        
+        #Create the "TAG" column to use later with the Tagger Function
+        self.DATAFRAME[TAG] = 0
+        
+        #Creating the Cell Object to impute functions
         self.CELL = self.DATAFRAME.loc[self.INDEX, self.COLUMN]
-    
+        
 
 
    

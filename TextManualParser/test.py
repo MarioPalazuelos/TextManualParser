@@ -14,7 +14,13 @@ df = pd.read_csv("test_text.txt", header=None, names=['Gina'])
 i = 1
 column = 'Gina'
 
-check = TextParser(df,i, column)
+
+
+dft = TextParser(df, i, column, 'Tag')
+
+
+
+check = TextParser(df,i, column, 'Tag')
 print(check.CELL)
 # check = TextParser(df,i, column).Forward()
 check.Forward()
