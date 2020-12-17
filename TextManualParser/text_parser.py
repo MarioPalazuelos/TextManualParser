@@ -21,6 +21,8 @@ class TextParser:
         #Creating the Cell Object to impute functions
         self.CELL = self.DATAFRAME.loc[self.INDEX, self.COLUMN]
         
+        
+        
 
         #Forward function forwards to the next cell from current INDEX
     def Forward(self):
@@ -28,13 +30,30 @@ class TextParser:
         self.CELL = self.DATAFRAME.loc[self.INDEX, self.COLUMN]
         
         
+        
+        
         #Backward function goes back to previous cell from current INDEX
     def Backward(self):
         self.INDEX = self.INDEX - 1
         self.CELL = self.DATAFRAME.loc[self.INDEX, self.COLUMN]
         
-        
+    
+    
+    
         #Tagger function tags the current cell with the users input
     def Tagger(self):
         self.DATAFRAME.loc[self.INDEX, self.TAG] = input()
+        
+        
+        
+        #Save funtion that saves the processed DF to a CSV File
+    def Save(self, SAVEPATH):
+        self.DATAFRAME.to_csv(f"{SAVEPATH}")
+    
+    
+    
+    
+        #Clears the console
+    def Clear(self):
+        return print("\n"*10)
         
