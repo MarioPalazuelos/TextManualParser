@@ -16,7 +16,7 @@ column = 'Gina'
 
 
 # Prueba Forward y Backward
-check = TextParser(df,i, column, 'Tag')
+#check = TextParser(df,i, column, 'Tag')
 # print(check.CELL)
 # # check = TextParser(df,i, column).Forward()
 # check.Forward()
@@ -33,3 +33,8 @@ check = TextParser(df,i, column, 'Tag')
 # check.Forward()
 # check.Tagger()
 # check.Forward()
+
+i = 0
+check = TextParser(df, i, column, 'Tag')
+
+
