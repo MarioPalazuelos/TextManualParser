@@ -56,4 +56,42 @@ class TextParser:
         #Clears the console
     def Clear(self):
         return print("\n"*10)
+    
+    
+        #Tagger function tags the current cell with the users input
+    def Printer(self):
+        print(self.DATAFRAME.loc[self.INDEX, self.COLUMN])
+        
+        
+    def Start(self):
+        
+        lenn = len(self.DATAFRAME.index)
+        
+        i = self.INDEX
+        
+        while i <= lenn:
+    
+            global var
+            
+            var = input("Next  > ")
+            
+            if var == '6':
+                
+                self.Printer()
+                self.Tagger()
+                self.Forward()
+                self.Save("SavedData/test.csv")
+                
+                i = i + 1
+            
+            elif var == '4':
+                
+                self.Backward()
+                self.Printer()
+                self.Tagger()
+                
+                i = i - 1
+                
+            else:
+                "ERRORORORORRORORORORO"
         
